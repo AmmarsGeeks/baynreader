@@ -1,0 +1,597 @@
+/* تحسينات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4; /* لون خلفية فاتح */
+    direction: rtl; /* تعيين اتجاه الكتابة من اليمين لليسار */
+
+}
+
+/* تحسينات رأس الصفحة */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start; /* توزيع العناصر */
+    background-color: #0D208C; /* لون الخلفية */
+    color: #FFFFFF;
+    padding: 10px 20px; /* حشوة رأس الصفحة */
+    font-size: 18px;
+    position: relative;
+    text-align: right;
+}
+
+.logo {
+    width: 100px; /* حجم الشعار */
+    display: block;
+    margin-left: 20px; /* إضافة مسافة من اليسار */
+    border-radius: 75%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* استخدام flex لتوزيع العناصر */
+    text-align: right; /* تغيير محاذاة النص إلى اليسار */
+    margin-left: auto;
+}
+
+nav ul li {
+    margin: 0 15px; /* تباعد بين عناصر القائمة */
+    display: flex; /* استخدام flex لتوزيع العناصر */
+    text-align: right; /* تغيير محاذاة النص إلى اليسار */
+    margin-left: auto;
+}
+
+nav ul li a {
+    background-color: transparent; /* زر ثانوي */
+    border: 1px solid #FFFFFF; /* حدود للزر الثانوي */
+    color: #FFFFFF; /* لون النص */
+    padding: 10px 15px; /* حجم الزر */
+    border-radius: 5px; /* زوايا دائرية */
+    text-decoration: none; /* إزالة الخط السفلي */
+    margin-left: auto; /* تباعد بين الأزرار */
+    transition: background 0.3s; /* تأثير التحول */
+    font-weight: bold; /* جعل النص غامق */
+    display: flex;
+    text-align: right;
+}
+
+/* أزرار الرأس */
+.header-buttons {
+    display: flex; /* استخدام flex لتوزيع الأزرار */
+    margin-right: auto; /* إضافة مسافة من اليسار */
+}
+
+.header-buttons .btn {
+    background-color: #2ABF34; /* لون الزر */
+    color: #FFFFFF; /* لون النص */
+    padding: 10px 15px; /* حجم الزر */
+    border-radius: 5px; /* زوايا دائرية */
+    text-decoration: none; /* إزالة الخط السفلي */
+    margin-right: 10px; /* تباعد بين الأزرار */
+    transition: background 0.3s; /* تأثير التحول */
+    display: flex;
+}
+
+.header-buttons .btn:hover {
+    background-color: #2ABF34; /* لون الزر عند التمرير */
+}
+
+.header-buttons .btn.secondary {
+    background-color: transparent; /* زر ثانوي */
+    border: 1px solid #FFFFFF; /* حدود للزر الثانوي */
+    color: #FFFFFF; /* لون النص */
+}
+
+/* قسم البطل */
+.hero {
+    background-color: #2fa1ff; /* لون الخلفية */
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px; /* زيادة حجم الخط */
+    margin-bottom: 10px; /* إضافة مسافة تحت العنوان */
+}
+
+.hero p {
+    font-size: 21px; /* حجم خط النص */
+    margin-bottom: 20px; /* إضافة مسافة تحت النص */
+}
+
+.btn {
+    background-color: #2ABF34; /* لون الزر */
+    color: #FFFFFF; /* لون النص */
+    padding: 15px 30px; /* حجم الزر */
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 18px; /* حجم خط الزر */
+    transition: background 0.3s; /* تأثير التحول */
+    font-size: 21px;
+}
+.feature img {
+    width: 50px; /* تحديد عرض الأيقونة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    margin-bottom: 10px; /* إضافة مسافة أسفل الأيقونة */
+}
+
+/* قسم المزايا */
+.features, .subscriptions {
+    padding: 40px 0;
+}
+
+.features h3{
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #0D208C;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px 15px;
+}
+
+.subscriptions h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #2ABF34;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px 15px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering items horizontally */
+    justify-content: center; /* Centering items vertically */
+    padding: 20px;
+}
+
+.feature-box, .subscription-box {
+    display: flex;
+    justify-content: center; /* Centering cards horizontally */
+    flex-wrap: wrap; /* Allowing cards to wrap */
+    max-width: 1000px; /* Optional: limiting max width */
+    width: 100%; /* Full width of the parent */
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.card {
+    background-color: #ffffffad; /* Background color */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+    flex: 1; /* Allow cards to grow */
+    min-width: 200px; /* Minimum width of the card */
+    max-width: 250px; /* Optional: maximum width of the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+    transition: transform 0.3s; /* Animation for hover effect */
+    text-align: center; /* Center text inside the card */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Raise card on hover */
+}
+
+.card img {
+    width: 60px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+/* قسم التذييل */
+footer {
+    background-color: #022859; /* لون الخلفية */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* تثبيت الفوتر */
+    left: 0;
+    bottom: 0; /* تحديد موضع الفوتر */
+    width: 100%; /* ملء العرض الكامل */
+}
+
+
+/* add-invoice page*/
+/* From Uiverse.io by 3bdel3ziz-T */ 
+
+/* الحاوية */
+.containera {
+    --transition: 350ms;
+    --folder-W: 80px; /* يمكنك تعديل هذه القيمة لتقليل حجم الحاوية */
+    --folder-H: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    height: calc(var(--folder-H) * 1.5);
+    position: relative;
+    width: 230px; /* تحديد عرض ثابت للحاوية */
+    max-width: 120%; /* التأكد من عدم تجاوز العرض */
+}
+.folder {
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 40px); /* ضبط الموضع حسب العرض الجديد */
+    animation: float 2.5s infinite ease-in-out;
+    transition: transform var(--transition) ease;
+}
+
+.folder:hover {
+    transform: scale(1.05);
+}
+
+.folder .front-side,
+.folder .back-side {
+    position: absolute;
+    transition: transform var(--transition);
+    transform-origin: bottom center;
+}
+
+.folder .back-side::before,
+.folder .back-side::after {
+    content: "";
+    display: block;
+    background-color: #6dd5ed;
+    opacity: 0.5;
+    z-index: 0;
+    width: var(--folder-W);
+    height: var(--folder-H);
+    position: absolute;
+    transform-origin: bottom center;
+    border-radius: 15px;
+    transition: transform 350ms;
+    z-index: 0;
+}
+
+.container:hover .back-side::before {
+    transform: rotateX(-5deg) skewX(5deg);
+}
+
+.container:hover .back-side::after {
+    transform: rotateX(-15deg) skewX(12deg);
+}
+
+.folder .front-side {
+    z-index: 1;
+}
+
+.container:hover .front-side {
+    transform: rotateX(-40deg) skewX(15deg);
+}
+
+.folder .tip {
+    background: linear-gradient(135deg, #ff9a56, #ff6f56);
+    width: 80px;
+    height: 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+}
+
+.folder .cover {
+    background: linear-gradient(135deg, #ffe563, #ffc663);
+    width: var(--folder-W);
+    height: var(--folder-H);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.submit-invoice {
+    color: #0735b4;
+}
+.custom-file-upload {
+    font-size: 1.1em;
+    color: #ffffff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background var(--transition) ease;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 35px;
+    position: relative;
+}
+
+.custom-file-upload:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+button {
+    font-size: 20px;
+    padding: 0.3em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
+    border-radius: 8px;
+    bottom: 20%;
+    margin-top: 20px; /* إضافة مسافة فوق زر الإرسال */
+}
+
+button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(22, 23, 24) 0%, rgba(0,212,255,1) 100%);
+}
+
+button:active {
+    transform: translate(0em, 0.2em);
+}
+
+/* View page */
+
+/* منطقة رفع الملف */
+#upload-area {
+    display: flex;
+    justify-content: center; /* مركز المحتوى أفقيًا */
+    align-items: center; /* مركز المحتوى عموديًا */
+    height: 70vh; /* ارتفاع المنطقة (يمكنك تعديله حسب الحاجة) */
+    background-color: #F4F4F4; /* لون خلفية */
+}
+.upload-container {
+    text-align: center; /* محاذاة النص في الوسط */
+    background-color: #FFFFFF; /* لون خلفية الحاوية */
+    padding: 20px; /* حشوة داخل الحاوية */
+    border-radius: 10px; /* زوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للحاوية */
+}
+
+#display-area {
+    display: flex; /* استخدام Flexbox لتوزيع العناصر */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    padding: 20px; /* حشوة حول المنطقة */
+}
+
+#invoice-display {
+    display: flex; /* استخدام Flexbox لتوزيع محتويات الفاتورة */
+    flex: 1; /* السماح للمساحة بالامتداد */
+}
+
+#invoice-image {
+    margin-right: 20px; /* إضافة مسافة بين الصورة والجدول */
+    flex: 1; /* السماح للصورة بالامتداد */
+}
+
+#info-table {
+    flex: 2; /* السماح لجدول الفواتير بالامتداد */
+}
+
+#invoice-table {
+    width: 100%; /* ملء العرض الكامل */
+    border-collapse: collapse; /* إزالة الفجوات بين الحدود */
+    margin-top: 20px; /* إضافة مسافة فوق الجدول */
+}
+
+#invoice-table th, #invoice-table td {
+    border: 1px solid #ccc; /* حدود خفيفة */
+    padding: 10px; /* حشوة داخل الخلايا */
+    text-align: center; /* محاذاة النص إلى الوسط */
+}
+
+#invoice-table th {
+    background-color: #0D208C; /* لون خلفية العنوان */
+    color: white; /* لون النص */
+}
+
+#invoice-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* لون خلفية الصفوف الزوجية */
+}
+
+#invoice-table tr:hover {
+    background-color: #e0e0e0; /* لون خلفية الصف عند التمرير */
+}
+
+
+
+/* تحسينات قسم تسجيل الدخول */
+.heroi {
+    display: flex;
+    justify-content: center; /* مركز المحتوى أفقيًا */
+    align-items: center; /* مركز المحتوى عموديًا */
+    height: 100vh; /* ارتفاع المنطقة */
+    background-color: #2fa1ff; /* لون خلفية */
+    margin-bottom: 7%;
+}
+
+.containeri {
+    max-width: 400px; /* عرض الحد الأقصى للحاوية */
+    background: #F8F9FD; /* لون خلفية فاتحة */
+    border-radius: 40px; /* زوايا دائرية */
+    padding: 25px 35px; /* حشوة داخل الحاوية */
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px; /* ظل خفيف للحاوية */
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(16, 137, 211);
+    margin-bottom: 20px; /* مسافة تحت العنوان */
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.input {
+    width: 90%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+}
+
+.input::placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.input:focus {
+    outline: none;
+    border-inline: 2px solid #12B1D1;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+.forgot-password a {
+    font-size: 11px;
+    color: #0099ff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.login-button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 20px;
+}
+
+.login-button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+/* From Uiverse.io by TasneemHatem97 */ 
+.containerr {
+    max-width: 450px;
+    background-color: #F1F7FE;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 32px 24px 24px;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  form .head {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  form .head span {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: black;
+  }
+  
+  form .head p {
+    font-size: 1.1rem;
+    color: #7C6666;
+  }
+  
+  form .inputs {
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    margin: 1rem 0.5rem;
+    border-radius: 8px;
+    border-bottom: none;
+    outline: 0;
+  }
+  
+  form .inputs input {
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+      /* علشان اقدر اخلي البلاس هولدر من اول الفورم بديله نفس الويدس */
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.299);
+    font-weight: 200;
+  }
+  
+  form button {
+    background-color: #4287ef;
+    color: white;
+    width: 100%;
+    height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+  }
+  
+  form button:hover {
+    background-color: #005ce6;
+  }
+  
+  .form-footer {
+    background-color: #e0ecfb;
+    padding: 16px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .form-footer a {
+    font-weight: bolder;
+    color: #0066ff;
+    transition: all 3s ease-in-out;
+  }
+  
+  .form-footer a:hover {
+    color: #005ce6;
+  }
+  

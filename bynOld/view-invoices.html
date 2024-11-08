@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيِّن | عرض الفواتير</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="add-invoice.html">إضافة فاتورة</a></li>
+                    <li><a href="view-invoices.html">عرض الفواتير</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="display-area">
+        <div id="info-table">
+            <h3>تفاصيل الفاتورة</h3>
+        <table id="invoice-table">
+        <thead>
+        <tr>
+            <th>الوصف / المنتج</th>
+            <th>الكمية</th>
+            <th>السعر</th>
+            <th>المبلغ الخاضع للضريبة</th>
+            <th>القيمة المضافة</th>
+            <th>المجموع</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- سيتم إضافة بيانات الفواتير هنا باستخدام JavaScript -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">الإجمالي</td>
+                <td id="total-sum">0.00</td> <!-- خلية للمجموع الكلي -->
+            </tr>
+        </tfoot>
+        
+        </table>
+        </div>
+        <div id="invoice-display">
+            <div id="invoice-image">
+                <h3>فاتورة مرفوعة</h3>
+                <img src="invoice.png" id="uploaded-invoice" alt="">
+            </div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2024 نظام إدخال الفواتير</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

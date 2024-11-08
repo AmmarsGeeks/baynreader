@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيِّن | إضافة فاتورة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="add-invoice.html">إضافة فاتورة</a></li>
+                    <li><a href="view-invoices.html">عرض الفواتير</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    
+<form action="view-invoices.html" method="get">
+    <section id="upload-area">
+        <div class="upload-container">
+            <h3>أرفع فاتورتك <br> الآن!</h3>
+            <div class="containera">
+                <div class="folder">
+                    <div class="front-side">
+                        <div class="tip"></div>
+                        <div class="cover"></div>
+                    </div>
+                    <div class="back-side cover"></div>
+                </div>
+                <label class="custom-file-upload">
+                    <input class="title" type="file" required>
+                    اختر صورة فاتورة
+                </label>
+            </div>
+            <div class="header-buttons">
+                <button value="view-invoices.html">إرسال الفاتورة</button>
+            </div>
+        </div>
+    </section>
+    </form>
+    <footer>
+        <p>&copy; 2024 نظام إدخال الفواتير</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/2.1.1/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script> <!-- إضافة المكتبة هنا -->
+    <script src="script.js"></script>
+</body>
+</html>

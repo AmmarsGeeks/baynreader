@@ -1,0 +1,6 @@
+openai
+google-cloud-vision
+pymupdf
+streamlit
+pillow
+python-dotenv
